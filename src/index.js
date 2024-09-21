@@ -12,7 +12,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 //routes.js como middleware
-app.use("/", routes);
+app.use("/api/", routes);
 
 //Iniciar servidor
 app.listen(PORT, () => {
