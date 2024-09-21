@@ -1,5 +1,6 @@
-import express from "express";
+import express, { Router } from "express";
 import "dotenv/config";
+import routes from "./routes/routes.js";
 
 const app = express();
 
@@ -10,10 +11,8 @@ const PORT = process.env.PORT || 3000;
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-//Rutas
-app.get("/", (req, res) => {
-  res.send("Hello World!");
-});
+//routes.js como middleware
+app.use("/", routes);
 
 //Iniciar servidor
 app.listen(PORT, () => {
