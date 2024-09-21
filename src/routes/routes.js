@@ -1,6 +1,5 @@
 import express from "express";
 import axios from "axios";
-import e from "express";
 
 const router = express.Router();
 
